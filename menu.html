@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Menu Quackenio - Pour Over, Cold Brew, Hot Coffee y mas." />
+  <title>Quackenio | Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Navegacion principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">QUACKEN<span>IO</span></a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <h1>MENU</h1>
+    <p>Good coffee | Good people | Great day</p>
+  </header>
+
+  <main>
+    <section class="menu-section" aria-labelledby="hot-title">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-icon" aria-hidden="true">Hot</span>
+          <h2 id="hot-title">HOT COFFEE</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Espresso</h3><p>Doble shot concentrado.</p></div><span class="menu-item-price">$45</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Americano</h3><p>Espresso con agua caliente.</p></div><span class="menu-item-price">$52</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Cappuccino</h3><p>Espresso, leche vaporizada y espuma.</p></div><span class="menu-item-price">$65</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Latte</h3><p>Espresso con leche y microespuma.</p></div><span class="menu-item-price">$68</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" aria-labelledby="pour-title">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-icon" aria-hidden="true">Pour</span>
+          <h2 id="pour-title">POUR OVER</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Oaxaca Pluma V60</h3><p>Notas de miel, durazno y chocolate.</p></div><span class="menu-item-price">$85</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Chiapas Bourbon Chemex</h3><p>Perfil citrico y caramelo suave.</p></div><span class="menu-item-price">$88</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Blend Quackenio Kalita</h3><p>Balanceado y facil de tomar.</p></div><span class="menu-item-price">$78</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" aria-labelledby="cold-title">
+      <div class="container">
+        <div class="category-header">
+          <span class="category-icon" aria-hidden="true">Cold</span>
+          <h2 id="cold-title">COLD BREW Y FRIAS</h2>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><h3>Cold Brew Clasico</h3><p>18 horas de extraccion en frio.</p></div><span class="menu-item-price">$72</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Nitro Cold Brew</h3><p>Cremoso, en cascada, sin azucar.</p></div><span class="menu-item-price">$88</span></div>
+          <div class="menu-item"><div class="menu-item-info"><h3>Iced Latte</h3><p>Espresso sobre hielo con leche fria.</p></div><span class="menu-item-price">$68</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="eval-banner" aria-label="Portal de evaluacion">
+      <h2>Te gusto nuestra carta?</h2>
+      <p>Cuentanos tu experiencia. Toma menos de 2 minutos.</p>
+      <a href="https://forms.cloud.microsoft/r/SLcjeuqy2h" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Evaluar Quackenio</a>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-brand">QUACKENIO</p>
+    <p class="footer-tagline">Fuel your day, the Quackenio way.</p>
+    <p>&copy; 2026 Quackenio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quackenio - Fuel your day, the Quackenio way. Cafe de especialidad, Cold Brew y Pour Over." />
+  <title>Quackenio | Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Navegacion principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">QUACKEN<span>IO</span></a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="hero-eyebrow">Bienvenido a</p>
+    <h1>QUACKEN<em>IO</em></h1>
+    <p class="hero-tagline">Fuel your day, the Quackenio way.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="menu.html" class="btn btn-primary">Ver Menu</a>
+      <a href="contact.html" class="btn btn-outline">Contactanos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title">SOBRE <em>NOSOTROS</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">Una historia de pasion por el cafe y buenas vibras</p>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              <strong>Quackenio</strong> nacio con una mision simple: llevar cafe de especialidad
+              a donde la gente lo necesita, con buena onda y sin complicaciones.
+            </p>
+            <p>
+              Trabajamos con granos de origen unico. Nuestra estrella es
+              <strong>Oaxaca Pluma 100% Pour Over</strong>, cultivado por productores
+              comprometidos con la calidad y la sostenibilidad.
+            </p>
+            <p>
+              Good coffee, good people, great day.
+            </p>
+            <a href="menu.html" class="btn btn-primary" style="margin-top:1rem;">Explorar Menu</a>
+          </div>
+
+          <div class="about-image">
+            <div class="about-image-placeholder">
+              <span>Q</span>
+              <p>GOOD VIBES SINCE 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section specialties" aria-labelledby="specialties-title">
+      <div class="container">
+        <h2 class="section-title" id="specialties-title">NUESTRAS <em>ESPECIALIDADES</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">Lo mejor de la carta Quackenio</p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">HOT</div>
+            <div class="card-body">
+              <h3>HOT COFFEE</h3>
+              <p>Espresso, americano, latte y cappuccino con granos tostados artesanalmente.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">COLD</div>
+            <div class="card-body">
+              <h3>COLD BREW</h3>
+              <p>Extraccion en frio por 18 horas: suave, intenso y sin acidez marcada.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">POUR</div>
+            <div class="card-body">
+              <h3>POUR OVER</h3>
+              <p>Metodo V60 taza a taza para resaltar las notas del grano Oaxaca Pluma.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="eval-banner" aria-label="Portal de evaluacion">
+      <h2>Como estuvo tu experiencia?</h2>
+      <p>Tu opinion nos ayuda a seguir mejorando. Tarda menos de 2 minutos.</p>
+      <a href="https://forms.cloud.microsoft/r/SLcjeuqy2h" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+        Completar evaluacion
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-brand">QUACKENIO</p>
+    <p class="footer-tagline">Fuel your day, the Quackenio way.</p>
+    <p>&copy; 2026 Quackenio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

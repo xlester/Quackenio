@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta a Quackenio - formulario de contacto, direccion, horarios y portal de evaluacion." />
+  <title>Quackenio | Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Navegacion principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">QUACKEN<span>IO</span></a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <h1>CONTACTO</h1>
+    <p>Algo que quieras contarnos? Estamos aqui.</p>
+  </header>
+
+  <main>
+    <section class="eval-banner" aria-label="Portal de evaluacion">
+      <h2>Portal de Evaluacion</h2>
+      <p>Visitaste Quackenio? Cuentanos tu experiencia. Solo toma 2 minutos.</p>
+      <a href="https://forms.cloud.microsoft/r/SLcjeuqy2h" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Ir al formulario</a>
+    </section>
+
+    <section class="section" style="background: var(--dark);" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-title" id="contact-title">COMO PODEMOS <em>AYUDARTE</em></h2>
+        <span class="section-divider"></span>
+        <p class="section-subtitle">Escribenos o visitanos en la barra.</p>
+
+        <div class="contact-grid">
+          <div class="contact-form-wrapper">
+            <h2 style="font-family: var(--font-heading); color: var(--white); margin-bottom: 1.5rem; font-size: 1.8rem; letter-spacing: 0.08em;">
+              ENVIANOS UN <span style="color:var(--yellow);">MENSAJE</span>
+            </h2>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electronico</label>
+                <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" placeholder="En que podemos ayudarte?" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aqui" required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit">Enviar mensaje</button>
+              <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h2>ENCUENTRANOS</h2>
+
+            <div class="info-block">
+              <div>
+                <h3>Direccion</h3>
+                <p>Tec de Monterrey, Campus Sonora Norte<br />PEI segundo piso, sigue los cuacks<br />Hermosillo, Sonora, Mexico</p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div>
+                <h3>Telefono</h3>
+                <p><a href="tel:+528181234567" style="color: var(--yellow); text-decoration: none;">+52 81 8123 4567</a></p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div>
+                <h3>Correo</h3>
+                <p><a href="mailto:hola@quackenio.mx" style="color: var(--yellow); text-decoration: none;">hola@quackenio.mx</a></p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div>
+                <h3>Horario</h3>
+                <div class="hours-grid">
+                  <span class="day">Lunes - Viernes</span> <span>7:00 am - 8:00 pm</span>
+                  <span class="day">Sabado</span> <span>8:00 am - 6:00 pm</span>
+                  <span class="day">Domingo</span> <span>Cerrado</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-block" style="background: rgba(255,214,0,0.06); border: 1px solid rgba(255,214,0,0.2); border-radius: 12px; padding: 1.25rem; margin-top: 0.5rem;">
+              <div>
+                <h3>Portal de Evaluacion</h3>
+                <p style="margin-bottom: 0.75rem;">Tu opinion nos ayuda a mejorar cada dia.</p>
+                <a href="https://forms.cloud.microsoft/r/SLcjeuqy2h" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Evaluar ahora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-brand">QUACKENIO</p>
+    <p class="footer-tagline">Fuel your day, the Quackenio way.</p>
+    <p>&copy; 2026 Quackenio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
