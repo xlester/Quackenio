@@ -2,6 +2,42 @@
    QUACKENIO — script.js
    ================================================ */
 
+// ── Duck SFX on buttons and tabs ────────────────
+(function () {
+  const clickableTargets = document.querySelectorAll('.btn, button, .nav-links a');
+  if (!clickableTargets.length) return;
+
+  const quackSrc = 'audio/quack_duck_sound.mp3';
+  const quackVariations = [0.92, 1.0, 1.08, 1.15];
+
+  // Preload base sound once; each click uses a clone for smoother overlap.
+  const preloadQuackAudio = new Audio(quackSrc);
+  preloadQuackAudio.preload = 'auto';
+  preloadQuackAudio.load();
+
+  function playQuack() {
+    try {
+      const quackAudio = new Audio(quackSrc);
+      quackAudio.preload = 'auto';
+      quackAudio.playbackRate = quackVariations[Math.floor(Math.random() * quackVariations.length)];
+      quackAudio.volume = 0.28 + Math.random() * 0.16;
+
+      const playPromise = quackAudio.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {
+          // Ignore autoplay/user-gesture restrictions silently.
+        });
+      }
+    } catch (err) {
+      // Ignore audio errors to avoid breaking interactions.
+    }
+  }
+
+  clickableTargets.forEach((el) => {
+    el.addEventListener('click', playQuack);
+  });
+})();
+
 // ── Hamburger menu toggle ──────────────────────
 (function () {
   const hamburger = document.querySelector('.hamburger');
