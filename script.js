@@ -99,7 +99,7 @@
     setTimeout(() => {
       form.reset();
       submitBtn.disabled    = false;
-      submitBtn.textContent = 'Enviar Mensaje';
+      submitBtn.textContent = 'Enviar cuack-mensaje';
       showMessage('¡Gracias, ' + name + '! Tu mensaje fue enviado. ¡El pato está en camino! 🦆', 'success');
     }, 1200);
   });
