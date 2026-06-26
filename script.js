@@ -4,7 +4,8 @@
 
 // ── Duck SFX on buttons and tabs ────────────────
 (function () {
-  const clickableTargets = document.querySelectorAll('.btn, button, .nav-links a');
+  const clickableSelector = '.btn, button, .nav-links a';
+  const clickableTargets = document.querySelectorAll(clickableSelector);
   if (!clickableTargets.length) return;
 
   const quackSrc = 'audio/quack_duck_sound.mp3';
@@ -20,7 +21,7 @@
       const quackAudio = new Audio(quackSrc);
       quackAudio.preload = 'auto';
       quackAudio.playbackRate = quackVariations[Math.floor(Math.random() * quackVariations.length)];
-      quackAudio.volume = 0.28 + Math.random() * 0.16;
+      quackAudio.volume = 0.5 + Math.random() * 0.15;
 
       const playPromise = quackAudio.play();
       if (playPromise && typeof playPromise.catch === 'function') {
@@ -33,9 +34,26 @@
     }
   }
 
-  clickableTargets.forEach((el) => {
-    el.addEventListener('click', playQuack);
-  });
+  document.addEventListener('pointerdown', (event) => {
+    const target = event.target.closest(clickableSelector);
+    if (!target) return;
+
+    playQuack();
+  }, { capture: true });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target.closest('.nav-links a');
+    if (!target) return;
+
+    const href = target.getAttribute('href');
+    const isInternalLink = href && !href.startsWith('http');
+    if (!isInternalLink) return;
+
+    event.preventDefault();
+    window.setTimeout(() => {
+      window.location.href = href;
+    }, 120);
+  }, { capture: true });
 })();
 
 // ── Hamburger menu toggle ──────────────────────
